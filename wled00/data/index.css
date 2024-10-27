@@ -694,26 +694,20 @@ img {
 	display: none;
 }
 
-.sliderbubble {
-	width: 24px;
-	position: absolute;
-	display: inline-block;
-	border-radius: 16px;
-	background: var(--c-3);
-	color: var(--c-f);
-	padding: 4px;
-	font-size: 14px;
-	right: 6px;
-	transition: visibility .25s ease,opacity .25s ease;
-	opacity: 0;
-	visibility: hidden;
-	/* left: 8px; */
-	top: 4px;
-}
-
-output.sliderbubbleshow {
-	visibility: visible;
-	opacity: 1;
+input[type=number].sliderInput {
+    width: 24px;
+    position: absolute;
+    display: inline-block;
+    border-radius: 10px;
+    background: var(--c-3);
+    color: var(--c-f);
+    padding: 2px 4px;
+    font-size: 14px;
+    transition: visibility 0.25s ease, opacity 0.25s ease;
+    opacity: 1;
+    visibility: visible;
+    right: 8px;
+    bottom: 5px;
 }
 
 input[type=range] {
