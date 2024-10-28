@@ -2360,26 +2360,26 @@ function setPalette(paletteId = null)
 	requestJson(obj);
 }
 
-function setBri(value) {
-    var obj = { "bri": parseInt(value) };
+function setBri(val) {
+    var obj = { "bri": parseInt(val) };
     requestJson(obj);
 }
 
-function setSpeed(value) {
-    var obj = { "seg": { "sx": parseInt(value) } };
-    requestJson(obj);
-}	
-
-function setIntensity(value) {
-    var obj = { "seg": { "ix": parseInt(value) } };
+function setSpeed(val) {
+    var obj = { "seg": { "sx": parseInt(val) } };
     requestJson(obj);
 }
 
-function setCustom(i=1, value)
+function setIntensity(val) {
+    var obj = { "seg": { "ix": parseInt(val) } };
+    requestJson(obj);
+}
+
+function setCustom(i=1, val)
 {
 	if (i<1 || i>3) return;
 	var obj = {"seg": {}};
-	var val = parseInt(value);
+	val = parseInt(val);
 	if      (i===3) obj.seg.c3 = val;
 	else if (i===2) obj.seg.c2 = val;
 	else            obj.seg.c1 = val;
