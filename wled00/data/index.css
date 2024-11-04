@@ -442,14 +442,14 @@ button {
 /* Slider wrapper div */
 .sliderwrap {
 	height: 30px;
-	width: 230px;
+	width: 222px;
 	max-width: 230px;
-	position: relative;
+	position: sticky;
 	z-index: 0;
 }
 
 #sliders .slider {
-	padding-right: 64px; /* offset for bubble */
+	padding-right: 64px; /* offset for number input */
 }
 
 #sliders .slider, #info .slider {
@@ -706,7 +706,7 @@ input[type=number].sliderInput {
     transition: visibility 0.25s ease, opacity 0.25s ease;
     opacity: 1;
     visibility: visible;
-    right: 8px;
+    right: 4px;
     bottom: 5px;
 }
 
@@ -1495,13 +1495,6 @@ dialog {
 	background: var(--c-sbh);
 }
 
-@media not all and (hover: none) {
-	.sliderwrap:hover + output.sliderbubble {
-		visibility: visible;
-		opacity: 1;
-	}
-}
-
 @media all and (max-width: 1023px) {
 	.top button {
 		width: 8%;
@@ -1513,7 +1506,7 @@ dialog {
 }
 
 @media all and (max-width: 335px) {
-	.sliderbubble {
+	.sliderInput {
 		display: none;
   	}
 }
@@ -1574,7 +1567,7 @@ dialog {
 	#putil .btn-s {
 		width: 114px;
 	}
-	#sliders .sliderbubble {
+	#sliders .sliderInput {
 		display: none;
 	}
 	#sliders .sliderwrap, .sbs .sliderwrap {
